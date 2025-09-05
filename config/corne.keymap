@@ -50,7 +50,7 @@
     };
 
      behaviors {
-            hml: home_row_mod_left {
+            hrml: home_row_mod_left {
                 compatible = "zmk,behavior-hold-tap";
                 #binding-cells = <2>;
                 flavor = "balanced";
@@ -61,7 +61,7 @@
                 hold-trigger-key-positions = <KEYS_L THUMBS>;
                 hold-trigger-on-release;
             };
-            hmr: home_row_mod_right {
+            hrmr: home_row_mod_right {
                 compatible = "zmk,behavior-hold-tap";
                 #binding-cells = <2>;
                 flavor = "balanced";
