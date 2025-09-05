@@ -46,9 +46,9 @@
 		//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 		mouse {
 			bindings = <
-			&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-			&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-			&trans	&trans 	&trans	&trans	&to 0	&trans
+			&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  
+			&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  
+			&trans  &trans  &trans  &trans  &to 0  &trans  
 			>;
 		};
 
@@ -73,9 +73,9 @@
 		//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 		other {
 			bindings = <
-			&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-			&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-			&trans	&to 0 			&trans	&trans	&trans	&trans
+			&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  
+			&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  
+			&trans  &to 0 	&trans  &trans  &trans  &trans  
 			>;
 		};
 	};
