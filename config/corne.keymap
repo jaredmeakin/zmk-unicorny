@@ -38,76 +38,86 @@
             key-positions = <38 37>;
         };
 
-        bluetooth_next {
-            bindings = <&bt BT_NXT>;
-            key-positions = <1 0 2>;
+        mute {
+            bindings = <&kp C_MUTE>;
+            key-positions = <30 31>;
+            layers = <1>;
         };
 
-        bluetooth_clear {
-            bindings = <&bt BT_CLR>;
-            key-positions = <12 13 14>;
+        caps {
+            bindings = <&kp CAPS>;
+            key-positions = <12 13>;
+            layers = <0>;
+        };
+
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <16 17>;
         };
     };
 
-     behaviors {
-            hrml: home_row_mod_left {
-                compatible = "zmk,behavior-hold-tap";
-                #binding-cells = <2>;
-                flavor = "balanced";
-                require-prior-idle-ms = <150>;
-                tapping-term-ms = <280>;
-                quick-tap-ms = <175>;
-                bindings = <&kp>, <&kp>;
-                hold-trigger-key-positions = <KEYS_L THUMBS>;
-                hold-trigger-on-release;
-            };
-            hrmr: home_row_mod_right {
-                compatible = "zmk,behavior-hold-tap";
-                #binding-cells = <2>;
-                flavor = "balanced";
-                require-prior-idle-ms = <150>;
-                tapping-term-ms = <280>;
-                quick-tap-ms = <175>;
-                bindings = <&kp>, <&kp>;
-                hold-trigger-key-positions = <KEYS_R THUMBS>;
-                hold-trigger-on-release;
-            };
+    behaviors {
+        hrml: home_row_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
         };
+
+        hrmr: home_row_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
 
         base {
             bindings = <
-&kp GRAVE            &kp Q           &kp W           &kp E           &kp R            &kp T        &kp Y       &kp U               &kp I             &kp O           &kp P               &kp BSPC
-&mt SEARCH ESCAPE    &hrml LCTRL A   &hrml LALT S    &hrml LGUI D    &hrml LSHIFT F   &kp G        &kp H       &hrml LSHIFT J      &hrml LGUI K      &hrml LALT L    &hrml LCTRL SEMI    &kp SQT
-&kp TAB              &kp Z           &kp X           &kp C           &kp V            &kp B        &kp N       &kp M               &kp COMMA         &kp DOT         &kp FSLH            &kp BACKSLASH
-                                     &to 3           &to 1           &kp SPACE                     &kp RET     &kp MINUS           &kp EQUAL
+&kp GRAVE                    &kp Q          &kp W         &kp E         &kp R           &kp T        &kp Y    &kp U           &kp I         &kp O         &kp P             &kp BSPC
+&mt LS(LA(LC(LG(F20)))) TAB  &hrml LCTRL A  &hrml LALT S  &hrml LGUI D  &hrml LSHIFT F  &kp G        &kp H    &hrml LSHIFT J  &hrml LGUI K  &hrml LALT L  &hrml LCTRL SEMI  &kp SQT
+&to 0                        &kp Z          &kp X         &kp C         &kp V           &kp B        &kp N    &kp M           &kp COMMA     &kp DOT       &kp FSLH          &kp BACKSLASH
+                                                          &to 4         &to 1           &kp SPACE    &kp RET  &kp MINUS       &kp EQUAL
             >;
         };
 
-        nav {
+        nav-and-media {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &none     &kp PAGE_UP  &kp UP_ARROW  &kp PAGE_DOWN  &none    &none
-&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp LEFT     &kp DOWN      &kp RIGHT      &kp END  &none
-&trans  &trans  &trans  &trans  &trans  &trans    &none     &none        &none         &none          &none    &none
-                        &to 3   &to 2   &trans    &trans    &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp K_CONTEXT_MENU  &kp PAGE_UP      &kp UP_ARROW      &kp PAGE_DOWN   &none       &none
+&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME            &kp LEFT         &kp DOWN          &kp RIGHT       &kp END     &none
+&trans  &trans  &trans  &trans  &trans  &trans    &kp C_VOLUME_DOWN   &kp C_VOLUME_UP  &kp C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT  &none
+                        &to 4   &to 3   &trans    &trans              &trans           &trans
             >;
         };
 
         mouse {
             bindings = <
-&none  &none  &none           &msc SCRL_UP    &none            &none     &none   &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &none  &none
-&none  &none  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none     &none   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
-&none  &none  &none           &none           &none            &none     &none   &none           &none           &none            &none  &none
-                              &to 3           &to 0            &trans    &trans  &mkp MCLK       &mkp RCLK
+&none   &none  &none           &msc SCRL_UP    &none            &none     &none   &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &none  &none
+&trans  &none  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none     &none   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
+&none   &none  &none           &none           &none            &none     &none   &none           &none           &none            &none  &none
+                               &to 4           &to 0            &trans    &trans  &mkp MCLK       &mkp RCLK
             >;
         };
 
         symbols {
             bindings = <
 &trans  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND     &kp ASTERISK       &kp CARET      &kp BACKSPACE
-&trans  &trans           &trans       &trans    &trans      &trans         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SEMICOLON  &kp SINGLE_QUOTE
+&trans  &trans           &trans       &trans    &trans      &kp CARET      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SEMICOLON  &kp SINGLE_QUOTE
 &trans  &trans           &trans       &trans    &trans      &trans         &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COMMA         &kp PERIOD         &kp SLASH      &kp BACKSLASH
                                       &to 4     &to 1       &trans         &trans                &kp MINUS              &kp EQUAL
             >;
@@ -115,10 +125,19 @@
 
         numbers {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &none   &kp N1  &kp N2  &kp N3  &none  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &none   &kp N4  &kp N5  &kp N6  &none  &none
-&trans  &trans  &trans  &trans  &trans  &trans    &none   &kp N7  &kp N8  &kp N9  &none  &none
-                        &to 0   &to 1   &trans    &trans  &none   &kp N0
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+                        &to 0   &to 1   &trans    &trans  &trans  &trans
+            >;
+        };
+
+        bluetooh {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&trans  &trans  &trans  &trans  &trans  &trans    &trans        &bt BT_PRV    &bt BT_NXT    &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans        &trans        &trans        &trans        &trans        &trans
+                        &trans  &trans  &trans    &trans        &trans        &trans
             >;
         };
     };
