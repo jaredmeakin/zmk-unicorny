@@ -54,6 +54,11 @@
             bindings = <&kp ESCAPE>;
             key-positions = <16 17>;
         };
+
+        to-bluetooth {
+            bindings = <&to 5>;
+            key-positions = <6 7 8>;
+        };
     };
 
     behaviors {
