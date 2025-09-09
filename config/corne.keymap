@@ -61,11 +61,13 @@
         off {
             bindings = <&soft_off>;
             key-positions = <3 4 5>;
+            layers = <0>;
         };
 
         boot {
             bindings = <&bootloader>;
             key-positions = <29 28 27>;
+            layers = <0>;
         };
 
         base {
