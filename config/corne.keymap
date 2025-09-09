@@ -15,6 +15,7 @@
 #define SEARCH LS(LC(LA(LG(F20))))
 
 &soft_off { hold-time-ms = <5000>; };
+
 &caps_word { continue-list = <UNDERSCORE MINUS>; };
 
 / {
@@ -47,7 +48,7 @@
             key-positions = <12 13>;
             layers = <0>;
         };
-        
+
         caps_word {
             bindings = <&kp CAPS>;
             key-positions = <13 14>;
@@ -95,6 +96,7 @@
             hold-trigger-key-positions = <KEYS_L KEYS_R THUMBS>;
             hold-while-undecided;
             hold-while-undecided-linger-ms = <0>;
+            hold-while-undecided-linger;
         };
 
         hrmr: home_row_mod_right {
@@ -108,6 +110,7 @@
             hold-trigger-key-positions = <KEYS_R KEYS_L THUMBS>;
             hold-while-undecided;
             hold-while-undecided-linger-ms = <0>;
+            hold-while-undecided-linger;
         };
     };
 
