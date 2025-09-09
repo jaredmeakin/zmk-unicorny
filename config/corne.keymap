@@ -15,6 +15,7 @@
 #define SEARCH LS(LC(LA(LG(F20))))
 
 &soft_off { hold-time-ms = <5000>; };
+&caps_word { continue-list = <UNDERSCORE MINUS>; };
 
 / {
     combos {
@@ -44,6 +45,12 @@
         caps {
             bindings = <&kp CAPS>;
             key-positions = <12 13>;
+            layers = <0>;
+        };
+        
+        caps_word {
+            bindings = <&kp CAPS>;
+            key-positions = <13 14>;
             layers = <0>;
         };
 
@@ -81,26 +88,26 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            require-prior-idle-ms = <150>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <180>;
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <KEYS_L THUMBS>;
-            hold-trigger-on-release;
+            hold-trigger-key-positions = <KEYS_L KEYS_R THUMBS>;
+            hold-while-undecided;
+            hold-while-undecided-linger-ms = <0>;
         };
 
         hrmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            require-prior-idle-ms = <150>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <180>;
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <KEYS_R THUMBS>;
-            hold-trigger-on-release;
+            hold-trigger-key-positions = <KEYS_R KEYS_L THUMBS>;
+            hold-while-undecided;
+            hold-while-undecided-linger-ms = <0>;
         };
     };
 
