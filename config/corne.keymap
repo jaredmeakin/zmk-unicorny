@@ -96,7 +96,6 @@
             hold-trigger-key-positions = <KEYS_L KEYS_R THUMBS>;
             hold-while-undecided;
             hold-while-undecided-linger-ms = <0>;
-            hold-while-undecided-linger;
         };
 
         hrmr: home_row_mod_right {
@@ -110,7 +109,6 @@
             hold-trigger-key-positions = <KEYS_R KEYS_L THUMBS>;
             hold-while-undecided;
             hold-while-undecided-linger-ms = <0>;
-            hold-while-undecided-linger;
         };
     };
 
