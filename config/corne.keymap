@@ -24,12 +24,12 @@
 
         prev {
             bindings = <&mkp MB4>;
-            key-positions = <19 20>;
+            key-positions = <6 7>;
         };
 
         next {
             bindings = <&mkp MB5>;
-            key-positions = <21 20>;
+            key-positions = <7 8>;
         };
 
         del {
@@ -40,28 +40,23 @@
         mute {
             bindings = <&kp C_MUTE>;
             key-positions = <30 31>;
-            layers = <1 6>;
+            layers = <1 7>;
         };
 
         caps {
             bindings = <&kp CAPS>;
-            key-positions = <12 13>;
-            layers = <0 6>;
+            key-positions = <2 3>;
+            layers = <0 7>;
         };
 
         caps_word {
             bindings = <&caps_word>;
-            key-positions = <13 14>;
+            key-positions = <3 4>;
             layers = <0>;
         };
 
-        esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <37 38>;
-        };
-
         bt {
-            bindings = <&to 5>;
+            bindings = <&to 6>;
             key-positions = <3 4 5>;
             layers = <0>;
         };
@@ -72,15 +67,20 @@
             layers = <0>;
         };
 
-        base {
-            bindings = <&to 0>;
-            key-positions = <39 40>;
-        };
-
         game {
-            bindings = <&to 6>;
+            bindings = <&to 7>;
             key-positions = <35 34 33>;
             layers = <0>;
+        };
+
+        esc_r {
+            bindings = <&kp ESC>;
+            key-positions = <40 39>;
+        };
+
+        esc_l {
+            bindings = <&kp ESC>;
+            key-positions = <38 37>;
         };
     };
 
@@ -142,19 +142,28 @@
 
         nums {
             bindings = <
-&trans  &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2  &mt HASH NUMBER_3  &mt DOLLAR NUMBER_4  &mt PERCENT N5    &mt LS(LCTRL) NUMBER_6  &mt AMPERSAND N7  &mt ASTERISK N8  &mt LEFT_PARENTHESIS N9  &mt RIGHT_PARENTHESIS N0  &trans
-&trans  &trans                    &trans                &trans             &trans               &trans            &trans                  &trans            &trans           &trans                   &trans                    &trans
-&trans  &kp F1                    &kp F2                &kp F3             &kp F4               &kp F5            &kp F6                  &kp F7            &kp F8           &kp F9                   &kp F10                   &trans
-                                                        &to 4              &to 1                &trans            &trans                  &trans            &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5            &kp NUMBER_6    &kp N7  &kp N8  &kp N9  &kp N0   &trans
+&trans  &trans        &trans        &trans        &trans        &sk LEFT_SHIFT    &sk LEFT_SHIFT  &trans  &trans  &trans  &trans   &trans
+&trans  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5            &kp F6          &kp F7  &kp F8  &kp F9  &kp F10  &trans
+                                    &to 4         &to 1         &trans            &trans          &trans  &trans
             >;
         };
 
         sym {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp EXCL               &mt HASH AT      &mt PERCENT DOLLAR  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt CARET ASTRK  &trans              &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans                 &trans           &trans              &trans
-                        &to 0   &to 1   &trans    &trans                &trans                 &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp EXCL               &mt HASH AT             &mt CARET PERCENT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mt ASTERISK AMPERSAND  &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans                 &trans                  &trans             &trans
+                        &to 5   &to 1   &trans    &trans                &trans                 &trans
+            >;
+        };
+
+        function {
+            bindings = <
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
+                        &to 0   &to 1   &trans    &trans  &trans  &trans
             >;
         };
 
@@ -172,7 +181,7 @@
 &kp GRAVE  &kp Q  &kp W  &kp E  &kp R  &kp T     &kp Y   &kp U   &kp I      &kp O    &kp P     &kp BSPC
 &kp TAB    &kp A  &kp S  &kp D  &kp F  &kp G     &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
 &trans     &kp Z  &kp X  &kp C  &kp V  &kp B     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-                         &mo 7  &mo 7  &trans    &trans  &trans  &trans
+                         &mo 8  &mo 8  &trans    &trans  &trans  &trans
             >;
         };
 
