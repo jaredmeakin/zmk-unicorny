@@ -63,7 +63,7 @@
 
         boot {
             bindings = <&bootloader>;
-            key-positions = <36 37 41 40>;
+            key-positions = <30 31 32 33>;
             layers = <0>;
         };
 
@@ -75,7 +75,7 @@
 
         esc {
             bindings = <&kp ESC>;
-            key-positions = <40 39>;
+            key-positions = <37 36>;
         };
 
         home {
