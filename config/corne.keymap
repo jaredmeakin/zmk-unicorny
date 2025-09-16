@@ -25,16 +25,19 @@
         prev {
             bindings = <&mkp MB4>;
             key-positions = <7 8 9>;
+            layers = <0 1 2 3 4 5 7>;
         };
 
         next {
             bindings = <&mkp MB5>;
             key-positions = <8 9 10>;
+            layers = <0 1 2 3 4 5 7>;
         };
 
         del {
             bindings = <&kp DELETE>;
             key-positions = <11 10>;
+            layers = <0 1 2 3 4 5 7>;
         };
 
         mute {
@@ -46,7 +49,7 @@
         caps {
             bindings = <&kp CAPS>;
             key-positions = <24 25 26>;
-            layers = <0 7>;
+            layers = <0>;
         };
 
         caps_word {
