@@ -43,7 +43,7 @@
         mute {
             bindings = <&kp C_MUTE>;
             key-positions = <30 31>;
-            layers = <1 7>;
+            layers = <1>;
         };
 
         caps {
