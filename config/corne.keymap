@@ -68,7 +68,7 @@
 
         boot {
             bindings = <&bootloader>;
-            key-positions = <29 28 27 26>;
+            key-positions = <5 4 3 2>;
             layers = <0>;
         };
 
