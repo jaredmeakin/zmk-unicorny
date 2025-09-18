@@ -70,9 +70,9 @@
             layers = <0>;
         };
 
-        base {
-            bindings = <&to 0>;
-            key-positions = <15 16>;
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <38 37>;
         };
     };
 
@@ -109,7 +109,7 @@
             bindings = <
 &kp GRAVE                    &kp Q          &kp W         &kp E         &kp R           &kp T        &kp Y    &kp U           &kp I         &kp O         &kp P             &kp BSPC
 &mt LA(LC(LG(LS(F10)))) TAB  &hrml LCTRL A  &hrml LALT S  &hrml LGUI D  &hrml LSHIFT F  &kp G        &kp H    &hrmr LSHIFT J  &hrmr LGUI K  &hrmr LALT L  &hrmr LCTRL SEMI  &kp SQT
-&kp ESC                      &kp Z          &kp X         &kp C         &kp V           &kp B        &kp N    &kp M           &kp COMMA     &kp DOT       &kp FSLH          &kp BACKSLASH
+&to 0                        &kp Z          &kp X         &kp C         &kp V           &kp B        &kp N    &kp M           &kp COMMA     &kp DOT       &kp FSLH          &kp BACKSLASH
                                                           &to 3         &to 1           &kp SPACE    &kp RET  &kp MINUS       &kp EQUAL
             >;
         };
