@@ -14,20 +14,13 @@
 #define THUMBS 36 37 38 39 40 41
 #define SEARCH LS(LC(LA(LG(F20))))
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1800  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 10    // default: 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 
 &mmv {
     x-input-code = <INPUT_REL_X>;
     y-input-code = <INPUT_REL_Y>;
-    time-to-max-speed-ms = <400>;
+    time-to-max-speed-ms = <600>;
     acceleration-exponent = <1>;
-};
-
-&msc {
-    x-input-code = <INPUT_REL_HWHEEL>;
-    y-input-code = <INPUT_REL_WHEEL>;
-    time-to-max-speed-ms = <300>;
-    acceleration-exponent = <0>;
 };
 
 &caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>; };
