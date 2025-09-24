@@ -23,8 +23,6 @@
     acceleration-exponent = <1>;
 };
 
-&caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>; };
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -125,7 +123,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SUPERKEY";
             #binding-cells = <0>;
-            bindings = <&kp TAB>, <&kp LS(LA(LC(LG(F10))))>;
+            bindings = <&kp TAB>, <&kp LS(LA(LC(LG(F10))))>, <&kp LA(LS(F9))>;
         };
     };
 
