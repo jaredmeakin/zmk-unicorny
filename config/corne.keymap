@@ -112,13 +112,6 @@
             hold-while-undecided;
         };
 
-        game_nums: game_nums {
-            compatible = "zmk,behavior-tap-dance";
-            label = "GAME_NUMS";
-            #binding-cells = <0>;
-            bindings = <&kp TAB>, <&mo 3>;
-        };
-
         superkey: superkey {
             compatible = "zmk,behavior-tap-dance";
             label = "SUPERKEY";
@@ -150,10 +143,10 @@
 
         mouse {
             bindings = <
-&trans  &none  &none           &msc SCRL_UP    &none            &none     &none      &none           &mmv MOVE_UP    &none            &none     &trans
-&trans  &none  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none     &mkp LCLK  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB2  &none
-&trans  &none  &none           &none           &none            &none     &none      &none           &none           &none            &none     &none
-                               &to 3           &to 1            &trans    &mkp MCLK  &mkp MB4        &mkp MB5
+&trans  &none  &none           &msc SCRL_UP    &none            &none     &none      &none           &mmv MOVE_UP    &none            &none  &trans
+&trans  &none  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none     &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
+&trans  &none  &none           &none           &none            &none     &none      &none           &none           &none            &none  &none
+                               &to 3           &to 1            &trans    &mkp LCLK  &mkp RCLK       &mkp MCLK
             >;
         };
 
@@ -187,7 +180,7 @@
         game {
             bindings = <
 &kp ESC         &kp Q  &kp W  &kp E         &kp R             &kp T     &kp Y   &kp U   &kp I         &kp O    &kp P     &kp BSPC
-&game_nums      &kp A  &kp S  &kp D         &kp F             &kp G     &kp H   &kp J   &kp K         &kp L    &kp SEMI  &kp SQT
+&lt 3 TAB       &kp A  &kp S  &kp D         &kp F             &kp G     &kp H   &kp J   &kp K         &kp L    &kp SEMI  &kp SQT
 &kp LEFT_SHIFT  &kp Z  &kp X  &kp C         &kp V             &kp B     &kp N   &kp M   &kp COMMA     &kp DOT  &kp FSLH  &kp BSLH
                               &kp LEFT_ALT  &kp LEFT_CONTROL  &trans    &trans  &trans  &kp LEFT_GUI
             >;
