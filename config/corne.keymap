@@ -58,7 +58,7 @@
         };
 
         bt {
-            bindings = <&to 5>;
+            bindings = <&sl 5>;
             key-positions = <11 10 9 8>;
             layers = <0>;
         };
