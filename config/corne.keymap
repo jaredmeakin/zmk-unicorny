@@ -47,13 +47,13 @@
 
         caps {
             bindings = <&kp CAPS>;
-            key-positions = <1 2>;
+            key-positions = <2 3>;
             layers = <0>;
         };
 
         caps_word {
             bindings = <&caps_word>;
-            key-positions = <2 3>;
+            key-positions = <3 4>;
             layers = <0>;
         };
 
