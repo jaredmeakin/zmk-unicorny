@@ -45,18 +45,6 @@
             layers = <0 1 2 3 4 6>;
         };
 
-        caps {
-            bindings = <&kp CAPS>;
-            key-positions = <2 3>;
-            layers = <0>;
-        };
-
-        caps_word {
-            bindings = <&caps_word>;
-            key-positions = <3 4>;
-            layers = <0>;
-        };
-
         bt {
             bindings = <&sl 5>;
             key-positions = <11 10 9 8>;
@@ -117,6 +105,15 @@
             hold-trigger-key-positions = <KEYS_R KEYS_L THUMBS>;
             hold-while-undecided;
         };
+
+        tab_caps_dance: tab_caps_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAB_CAPS_DANCE";
+            #binding-cells = <0>;
+            bindings = <&kp TAB>, <&caps_word>;
+
+            tapping-term-ms = <150>;
+        };
     };
 
     keymap {
@@ -160,9 +157,9 @@
 
         sym {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp EXCLAMATION  &kp AT     &kp HASH       &kp DOLLAR
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT      &kp CARET  &kp AMPERSAND  &kp ASTERISK
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans           &trans     &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans  &trans  &trans  &trans
                         &to 3   &to 1   &trans    &trans                &trans                 &trans
             >;
         };
