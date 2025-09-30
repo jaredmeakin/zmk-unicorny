@@ -87,7 +87,7 @@
         };
 
         seek {
-            bindings = <&kp LS(LA(LC(LG(F9))))>;
+            bindings = <&kp LA(LC(F10))>;
             key-positions = <39 40>;
             layers = <0>;
         };
