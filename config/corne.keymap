@@ -108,7 +108,7 @@
             #binding-cells = <0>;
             bindings = <&kp ENTER>, <&to 0>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <170>;
         };
 
         tab_caps_word_dance: tab_caps_word_dance {
