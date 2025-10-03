@@ -107,8 +107,6 @@
             label = "ENTER_HOME_DANCE";
             #binding-cells = <0>;
             bindings = <&kp ENTER>, <&to 0>;
-
-            tapping-term-ms = <160>;
         };
 
         tab_caps_word_dance: tab_caps_word_dance {
