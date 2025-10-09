@@ -106,13 +106,6 @@
             hold-trigger-key-positions = <KEYS_R KEYS_L THUMBS>;
             hold-while-undecided;
         };
-
-        tab_caps_word_dance: tab_caps_word_dance {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAB_CAPS_WORD_DANCE";
-            #binding-cells = <0>;
-            bindings = <&kp TAB>, <&caps_word>;
-        };
     };
 
     keymap {
@@ -156,9 +149,9 @@
 
         sym {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp EXCL  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans    &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans  &trans  &trans  &trans
                         &to 3   &to 1   &trans    &trans                &trans                 &trans
             >;
         };
