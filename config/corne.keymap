@@ -122,10 +122,10 @@
 
         nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &none     &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &none    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp LEFT     &kp DOWN  &kp RIGHT      &kp END  &none
-&trans  &trans  &trans  &trans  &trans  &trans    &none     &none        &trans    &trans         &trans   &trans
-                        &to 3   &to 2   &trans    &trans    &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &none     &kp LG(LEFT_BRACKET)  &kp UP    &kp LG(RIGHT_BRACKET)  &none    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp LEFT              &kp DOWN  &kp RIGHT              &kp END  &none
+&trans  &trans  &trans  &trans  &trans  &trans    &none     &none                 &trans    &trans                 &trans   &trans
+                        &to 3   &to 2   &trans    &trans    &trans                &trans
             >;
         };
 
