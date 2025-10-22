@@ -42,7 +42,7 @@
         };
 
         bt {
-            bindings = <&sl 5>;
+            bindings = <&sl 4>;
             key-positions = <11 10 9 8>;
             layers = <0>;
         };
