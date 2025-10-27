@@ -25,13 +25,13 @@
 
         prev {
             bindings = <&kp LG(LEFT_BRACKET)>;
-            key-positions = <7 8>;
+            key-positions = <7 6>;
             layers = <0 1 2>;
         };
 
         next {
             bindings = <&kp LG(RIGHT_BRACKET)>;
-            key-positions = <9 8>;
+            key-positions = <8 7>;
             layers = <0 1 2>;
         };
 
@@ -74,6 +74,16 @@
             bindings = <&kp LA(LC(F10))>;
             key-positions = <39 40>;
             layers = <0>;
+        };
+
+        prev_method {
+            bindings = <&kp LS(LC(UP_ARROW))>;
+            key-positions = <4 3>;
+        };
+
+        next_method {
+            bindings = <&kp LS(LC(DOWN))>;
+            key-positions = <4 5>;
         };
     };
 
