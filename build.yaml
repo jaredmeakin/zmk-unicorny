@@ -19,7 +19,26 @@
 #
 ---
 include:
+  # 1. Standard "Dongle-less" Builds
+  # These are your normal keyboard firmware builds
   - board: nice_nano_v2
     shield: corne_left nice_view_adapter nice_view
+    artifact-name: corne_left
+
   - board: nice_nano_v2
     shield: corne_right nice_view_adapter nice_view
+    artifact-name: corne_right
+
+  # 2. Prospector "Dongle" Builds
+  # These are the new builds for use WITH the dongle
+  - board: nice_nano_v2
+    shield: corne_left nice_view_adapter nice_view prospector_peripheral
+    artifact-name: corne_left_prospector
+
+  - board: nice_nano_v2
+    shield: corne_right nice_view_adapter nice_view prospector_peripheral
+    artifact-name: corne_right_prospector
+
+  - board: seeeduino_xiao_ble
+    shield: corne_dongle prospector_adapter
+    artifact-name: corne_dongle_prospector
