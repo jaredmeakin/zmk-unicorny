@@ -6,6 +6,13 @@
         zmk,physical-layout = &physical_layout0;
     };
 
+    default_transform: matrix_transform_0 {
+        compatible = "zmk,matrix-transform";
+        columns = <0>;
+        rows = <0>;
+        map = <>;
+    };
+
     mock_kscan: mock_kscan_0 {
         compatible = "zmk,kscan-mock";
         label = "MOCK_KSCAN";
@@ -14,5 +21,7 @@
     physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "Corne";
+        // Now this line is valid because &default_transform exists
+        transform = <&default_transform>;
     };
 };
