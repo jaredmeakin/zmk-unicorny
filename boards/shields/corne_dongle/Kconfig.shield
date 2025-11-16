@@ -1,2 +1,0 @@
-config SHIELD_CORNE_DONGLE
-    bool "corne_dongle"
