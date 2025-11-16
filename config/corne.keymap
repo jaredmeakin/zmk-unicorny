@@ -62,7 +62,7 @@
         esc {
             bindings = <&kp ESCAPE>;
             key-positions = <38 37>;
-            layers = <0 1 2 3>;
+            layers = <0 1 2 3 4 5>;
         };
 
         game-to-base {
@@ -87,12 +87,6 @@
             bindings = <&kp LS(LC(DOWN))>;
             key-positions = <4 5>;
             layers = <0 1 2 3>;
-        };
-
-        game_esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <2 3>;
-            layers = <5>;
         };
     };
 
@@ -125,7 +119,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        base {
+        home {
             bindings = <
 &kp GRAVE   &kp Q          &kp W         &kp E         &kp R           &kp T        &kp Y      &kp U           &kp I         &kp O         &kp P             &kp BSPC
 &kp TAB     &hrml LCTRL A  &hrml LALT S  &hrml LGUI D  &hrml LSHIFT F  &kp G        &kp H      &hrmr LSHIFT J  &hrmr LGUI K  &hrmr LALT L  &hrmr LCTRL SEMI  &kp SQT
@@ -134,7 +128,7 @@
             >;
         };
 
-        nav {
+        navigation {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &none     &none     &kp UP    &none      &none    &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT  &kp END  &none
@@ -143,7 +137,7 @@
             >;
         };
 
-        num_and_code {
+        coding {
             bindings = <
 &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp LEFT_BRACE        &kp RIGHT_BRACE                     &kp EXCLAMATION      &kp AMPERSAND           &kp DOLLAR               &trans
 &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0    &kp LEFT_PARENTHESIS  &hrmr LEFT_SHIFT RIGHT_PARENTHESIS  &hrmr LEFT_GUI HASH  &hrmr LEFT_ALT PERCENT  &hrmr LEFT_CONTROL SEMI  &trans
@@ -161,7 +155,7 @@
             >;
         };
 
-        bt {
+        bluetooth {
             bindings = <
 &none  &none  &none  &none  &none  &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
 &none  &none  &none  &none  &none  &none    &none         &none         &none         &none         &none         &none
@@ -170,7 +164,7 @@
             >;
         };
 
-        game {
+        gaming {
             bindings = <
 &none           &kp Q  &kp W  &kp E      &kp R         &kp T     &kp Y   &kp U   &kp I         &kp O    &kp P     &kp BSPC
 &kp TAB         &kp A  &kp S  &kp D      &kp F         &kp G     &kp H   &kp J   &kp K         &kp L    &kp SEMI  &kp SQT
