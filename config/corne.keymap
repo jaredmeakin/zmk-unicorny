@@ -88,12 +88,6 @@
             key-positions = <4 5>;
             layers = <0 1 2 3>;
         };
-
-        game_esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <2 3>;
-            layers = <5>;
-        };
     };
 
     behaviors {
