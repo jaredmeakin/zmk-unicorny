@@ -93,24 +93,24 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
+            tapping-term-ms = <280>; // hold time to register as modifier
+            quick-tap-ms = <175>; // repeat key window
+            require-prior-idle-ms = <150>; // fix for rolling of modifiers
             bindings = <&kp>, <&kp>;
-
             hold-trigger-key-positions = <KEYS_L KEYS_R THUMBS>;
-            hold-while-undecided;
+            hold-trigger-on-release; // trying to keep balanced snappy
         };
 
         hrmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
-
             hold-trigger-key-positions = <KEYS_R KEYS_L THUMBS>;
-            hold-while-undecided;
+            hold-trigger-on-release;
         };
     };
 
