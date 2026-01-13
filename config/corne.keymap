@@ -86,6 +86,18 @@
             bindings = <&kp LS(LC(DOWN))>;
             key-positions = <4 5>;
         };
+
+        to-mouse {
+            bindings = <&to 3>;
+            key-positions = <37 36>;
+            layers = <0 1 2>;
+        };
+
+        mouse-to-home {
+            bindings = <&to 0>;
+            key-positions = <37 36>;
+            layers = <3>;
+        };
     };
 
     behaviors {
@@ -97,6 +109,7 @@
             quick-tap-ms = <175>; // repeat key window
             require-prior-idle-ms = <150>; // fix for rolling of modifiers
             bindings = <&kp>, <&kp>;
+
             hold-trigger-key-positions = <KEYS_L KEYS_R THUMBS>;
             hold-trigger-on-release; // trying to keep balanced snappy
         };
@@ -109,6 +122,7 @@
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
+
             hold-trigger-key-positions = <KEYS_R KEYS_L THUMBS>;
             hold-trigger-on-release;
         };
@@ -122,7 +136,7 @@
 &kp GRAVE   &kp Q          &kp W         &kp E         &kp R           &kp T        &kp Y      &kp U           &kp I         &kp O         &kp P             &kp BSPC
 &kp TAB     &hrml LCTRL A  &hrml LALT S  &hrml LGUI D  &hrml LSHIFT F  &kp G        &kp H      &hrmr LSHIFT J  &hrmr LGUI K  &hrmr LALT L  &hrmr LCTRL SEMI  &kp SQT
 &caps_word  &kp Z          &kp X         &kp C         &kp V           &kp B        &kp N      &kp M           &kp COMMA     &kp DOT       &kp FSLH          &kp BACKSLASH
-                                         &to 0         &to 1           &kp SPACE    &kp ENTER  &kp MINUS       &kp EQUAL
+                                         &to 1         &to 2           &kp SPACE    &kp ENTER  &kp MINUS       &kp EQUAL
             >;
         };
 
@@ -131,7 +145,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &none     &none     &kp UP    &none      &none    &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT  &kp END  &none
 &trans  &trans  &trans  &trans  &trans  &trans    &none     &none     &trans    &trans     &trans   &trans
-                        &trans  &to 2   &trans    &trans    &trans    &trans
+                        &to 0   &to 2   &trans    &trans    &trans    &trans
             >;
         };
 
@@ -140,16 +154,16 @@
 &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp LEFT_BRACE        &kp RIGHT_BRACE                     &kp EXCLAMATION      &kp AMPERSAND           &kp DOLLAR               &trans
 &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0    &kp LEFT_PARENTHESIS  &hrmr LEFT_SHIFT RIGHT_PARENTHESIS  &hrmr LEFT_GUI HASH  &hrmr LEFT_ALT PERCENT  &hrmr LEFT_CONTROL SEMI  &trans
 &trans  &none   &none   &none   &none   &none     &kp LEFT_BRACKET      &kp RIGHT_BRACKET                   &trans               &trans                  &trans                   &trans
-                        &trans  &to 3   &trans    &trans                &trans                              &trans
+                        &to 1   &to 0   &trans    &trans                &trans                              &trans
             >;
         };
 
         mouse {
             bindings = <
-&trans  &none  &none           &msc SCRL_UP    &none            &none     &none      &mkp MB4          &mmv MOVE_UP    &mkp MB5         &none       &trans
-&trans  &none  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none     &none      &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none       &none
-&trans  &none  &none           &none           &none            &none     &none      &kp C_PLAY_PAUSE  &kp C_VOL_DN    &kp C_VOLUME_UP  &kp C_PREV  &kp C_NEXT
-                               &trans          &to 1            &trans    &mkp LCLK  &mkp RCLK         &mkp MCLK
+&trans  &none  &none           &msc SCRL_UP    &none            &none               &none      &mkp MB4          &mmv MOVE_UP    &mkp MB5         &none       &trans
+&trans  &none  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none               &none      &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none       &none
+&trans  &none  &none           &none           &none            &none               &none      &kp C_PLAY_PAUSE  &kp C_VOL_DN    &kp C_VOLUME_UP  &kp C_PREV  &kp C_NEXT
+                               &to 1           &to 2            &kp LEFT_COMMAND    &mkp LCLK  &mkp RCLK         &mkp MCLK
             >;
         };
 
