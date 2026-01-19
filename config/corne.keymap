@@ -124,7 +124,7 @@
 &kp GRAVE   &kp Q          &kp W         &kp E         &kp R           &kp T        &kp Y      &kp U           &kp I         &kp O         &kp P             &kp BSPC
 &kp TAB     &hrml LCTRL A  &hrml LALT S  &hrml LGUI D  &hrml LSHIFT F  &kp G        &kp H      &hrmr LSHIFT J  &hrmr LGUI K  &hrmr LALT L  &hrmr LCTRL SEMI  &kp SQT
 &caps_word  &kp Z          &kp X         &kp C         &kp V           &kp B        &kp N      &kp M           &kp COMMA     &kp DOT       &kp FSLH          &kp BACKSLASH
-                                         &tog 1        &tog 2          &kp SPACE    &kp ENTER  &kp MINUS       &kp EQUAL
+                                         &to 1         &to 2           &kp SPACE    &kp ENTER  &kp MINUS       &kp EQUAL
             >;
         };
 
@@ -133,7 +133,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &none     &none     &kp UP    &none      &none    &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT  &kp END  &none
 &trans  &trans  &trans  &trans  &trans  &trans    &none     &none     &trans    &trans     &trans   &trans
-                        &trans  &trans  &trans    &trans    &trans    &trans
+                        &to 0   &to 2   &trans    &trans    &trans    &trans
             >;
         };
 
@@ -142,7 +142,7 @@
 &trans  &kp N1  &kp N2  &kp N3  &kp N4        &kp N5         &kp LEFT_BRACE        &kp RIGHT_BRACE                     &kp EXCLAMATION        &kp AT                    &kp HASH                    &trans
 &trans  &kp N6  &kp N7  &kp N8  &kp N9        &kp N0         &kp LEFT_PARENTHESIS  &hrmr LEFT_SHIFT RIGHT_PARENTHESIS  &hrmr LEFT_GUI DOLLAR  &hrmr LEFT_ALT AMPERSAND  &hrmr LEFT_CONTROL PERCENT  &trans
 &trans  &none   &none   &none   &kp ASTERISK  &kp PERCENT    &kp LEFT_BRACKET      &kp RIGHT_BRACKET                   &trans                 &trans                    &trans                      &trans
-                        &trans  &trans        &trans         &trans                &trans                              &trans
+                        &to 1   &to 0         &trans         &trans                &trans                              &trans
             >;
         };
 
