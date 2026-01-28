@@ -83,8 +83,15 @@
         };
 
         to-mouse {
-            bindings = <&tog 3>;
+            bindings = <&to 3>;
             key-positions = <37 36>;
+            layers = <0 1 2 4 5>;
+        };
+
+        to-base-from-mouse {
+            bindings = <&to 0>;
+            key-positions = <37 36>;
+            layers = <3>;
         };
     };
 
