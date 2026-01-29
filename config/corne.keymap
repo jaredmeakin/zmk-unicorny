@@ -129,6 +129,7 @@
             tapping-term-ms = <180>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&to>;
+
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
@@ -166,10 +167,10 @@
 
         mouse {
             bindings = <
-&trans  &trans  &none           &msc SCRL_UP    &none             &none         &none      &mkp MB4          &mmv MOVE_UP    &mkp MB5         &none       &trans
-&trans  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT   &none         &none      &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none       &none
-&trans  &trans  &trans          &trans          &trans            &none         &none      &kp C_PLAY_PAUSE  &kp C_VOL_DN    &kp C_VOLUME_UP  &kp C_PREV  &kp C_NEXT
-                                &kp LEFT_ALT    &kp LEFT_COMMAND  &kp LSHIFT    &mkp LCLK  &mkp RCLK         &mkp MCLK
+&trans  &trans  &none           &msc SCRL_UP    &none            &kp LA(LEFT_COMMAND)    &none      &mkp MB4          &mmv MOVE_UP    &mkp MB5         &none       &trans
+&trans  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &kp LEFT_SHIFT          &none      &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none       &none
+&trans  &trans  &trans          &trans          &trans           &kp LEFT_ALT            &none      &kp C_PLAY_PAUSE  &kp C_VOL_DN    &kp C_VOLUME_UP  &kp C_PREV  &kp C_NEXT
+                                &trans          &trans           &trans                  &mkp LCLK  &mkp RCLK         &mkp MCLK
             >;
         };
 
