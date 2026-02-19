@@ -41,7 +41,6 @@
         bt {
             bindings = <&sl 4>;
             key-positions = <11 10 9 8>;
-            layers = <0>;
         };
 
         boot {
@@ -85,7 +84,6 @@
         to-mouse {
             bindings = <&to 3>;
             key-positions = <37 36>;
-            layers = <0 1 2 4 5>;
         };
 
         to-base-from-mouse {
@@ -158,19 +156,19 @@
 
         code {
             bindings = <
-&trans  &kp N1                   &kp N2          &kp N3                 &kp N4               &kp N5         &kp LEFT_BRACE        &kp RIGHT_BRACE                     &kp EXCLAMATION        &kp AT                    &kp HASH                    &trans
-&trans  &hrml LEFT_ALT NUMBER_6  &hrml LCTRL N7  &hrml LEFT_COMMAND N8  &hrml LEFT_SHIFT N9  &kp N0         &kp LEFT_PARENTHESIS  &hrmr LEFT_SHIFT RIGHT_PARENTHESIS  &hrmr LEFT_GUI DOLLAR  &hrmr LEFT_ALT AMPERSAND  &hrmr LEFT_CONTROL PERCENT  &trans
-&trans  &trans                   &trans          &trans                 &kp ASTERISK         &kp PERCENT    &kp LEFT_BRACKET      &kp RIGHT_BRACKET                   &trans                 &trans                    &trans                      &trans
+&trans  &kp N1                   &kp N2          &kp N3                 &kp N4               &kp N5         &kp LEFT_BRACE        &kp RIGHT_BRACE                     &kp EXCLAMATION        &kp AT                    &kp HASH                 &trans
+&trans  &hrml LEFT_ALT NUMBER_6  &hrml LCTRL N7  &hrml LEFT_COMMAND N8  &hrml LEFT_SHIFT N9  &kp N0         &kp LEFT_PARENTHESIS  &hrmr LEFT_SHIFT RIGHT_PARENTHESIS  &hrmr LEFT_GUI DOLLAR  &hrmr LEFT_ALT AMPERSAND  &hrmr LEFT_CONTROL SEMI  &trans
+&trans  &trans                   &trans          &trans                 &kp ASTERISK         &kp PERCENT    &kp LEFT_BRACKET      &kp RIGHT_BRACKET                   &trans                 &trans                    &trans                   &trans
                                                  &to 1                  &to 0                &trans         &trans                &trans                              &trans
             >;
         };
 
         mouse {
             bindings = <
-&trans  &trans  &trans          &msc SCRL_UP    &trans           &kp LA(LEFT_COMMAND)    &none      &mkp MB4          &mmv MOVE_UP    &mkp MB5         &none       &trans
-&trans  &trans  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &kp LEFT_SHIFT          &none      &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none       &none
-&trans  &trans  &trans          &trans          &trans           &kp LEFT_ALT            &none      &kp C_PLAY_PAUSE  &kp C_VOL_DN    &kp C_VOLUME_UP  &kp C_PREV  &kp C_NEXT
-                                &trans          &trans           &trans                  &mkp LCLK  &mkp RCLK         &mkp MCLK
+&trans  &trans        &trans          &msc SCRL_UP    &trans           &kp LEFT_COMMAND    &none      &mkp MB4          &mmv MOVE_UP    &mkp MB5         &none       &trans
+&trans  &kp LEFT_GUI  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &kp LEFT_SHIFT      &none      &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none       &none
+&trans  &trans        &trans          &trans          &trans           &kp LEFT_ALT        &none      &kp C_PLAY_PAUSE  &kp C_VOL_DN    &kp C_VOLUME_UP  &kp C_PREV  &kp C_NEXT
+                                      &trans          &trans           &trans              &mkp LCLK  &mkp RCLK         &mkp MCLK
             >;
         };
 
