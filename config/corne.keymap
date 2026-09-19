@@ -154,6 +154,7 @@
         compatible = "zmk,keymap";
 
         // ─── LAYER 0: BASE ⌨️ ───────────────────────────────────────────
+        // home row mods, boi!
         base {
             bindings = <
                 &kp GRAVE &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &kp BSPC
@@ -164,9 +165,12 @@
         };
 
         // ─── LAYER 1: NAV 🧭 ────────────────────────────────────────────
+        // move around lines with arrows keys, and make the left + right click available
+        // as the key code for the context menu doesn't always triggr it. this allows you to
+        // navigate around words, and than right click to do things like correct spelling
         nav {
             bindings = <
-                &trans &trans &trans &trans &trans &trans &none &none &kp UP &none &none &trans
+                &trans &trans &trans &trans &trans &trans &none LCLK &kp UP RCLK &none &trans
                 &trans &trans &trans &trans &trans &trans &kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END &none
                 &trans &trans &trans &trans &trans &trans &none &none &trans &trans &trans &trans
                 &to 0 &to 2 &trans &trans &trans &trans
@@ -174,6 +178,9 @@
         };
 
         // ─── LAYER 2: CODE 💻 ───────────────────────────────────────────
+        // left hand has numbers with 1 starting at Q spanning the first and second rows with G as 0
+        // right hand has symbols with only asterisk and percent, being less used, on the left hand
+        // both hands have home row mods
         code {
             bindings = <
                 &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp LEFT_BRACE &kp RIGHT_BRACE &kp EXCLAMATION &kp AT &kp HASH &trans
@@ -184,12 +191,14 @@
         };
 
         // ─── LAYER 3: MOUSE 🖱️ ──────────────────────────────────────────
+        // navigate with right hand, and click with right thumb-cluster
+        // leaves left hand open for home row operations like ⌘ + C
         mouse {
             bindings = <
-                &trans &trans &trans &msc SCRL_UP &trans &kp LEFT_COMMAND &none &mkp MB4 &mmv MOVE_UP &mkp MB5 &none &trans
-                &trans &kp LEFT_GUI &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_RIGHT &kp LEFT_SHIFT &none &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &none
+                &trans &trans &trans &trans &trans &trans &trans &msc SCRL_DOWN &mmv MOVE_UP &msc SCRL_UP &none &trans
+                &trans &trans &trans &trans &trans &trans &msc SCRL_LEFT &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_RIGHT &none
                 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &mkp LCLK &mkp MCLK &mkp RCLK
+                &trans &trans &trans &mkp LCLK &mkp RCLK &mkp MCLK
             >;
         };
 
