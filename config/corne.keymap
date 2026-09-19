@@ -170,7 +170,7 @@
         // navigate around words, and than right click to do things like correct spelling
         nav {
             bindings = <
-                &trans &trans &trans &trans &trans &trans &none LCLK &kp UP RCLK &none &trans
+                &trans &trans &trans &trans &trans &trans &none &mkp LCLK &kp UP &mkp RCLK &none &trans
                 &trans &trans &trans &trans &trans &trans &kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END &none
                 &trans &trans &trans &trans &trans &trans &none &none &trans &trans &trans &trans
                 &to 0 &to 2 &trans &trans &trans &trans
@@ -197,7 +197,7 @@
             bindings = <
                 &trans &trans &trans &trans &trans &trans &trans &msc SCRL_DOWN &mmv MOVE_UP &msc SCRL_UP &none &trans
                 &trans &trans &trans &trans &trans &trans &msc SCRL_LEFT &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_RIGHT &none
-                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
                 &trans &trans &trans &mkp LCLK &mkp RCLK &mkp MCLK
             >;
         };
