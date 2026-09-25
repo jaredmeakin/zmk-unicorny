@@ -189,7 +189,7 @@
 
         nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &none   &mt HOME LG(LEFT)  &kp UP    &mt END LG(RIGHT)  &none   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &none   &mt LG(LEFT) HOME  &kp UP    &mt LG(RIGHT) END  &none   &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT           &kp DOWN  &kp RIGHT          &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans             &trans    &trans             &trans  &trans
                         &to 0   &to 2   &trans    &trans  &trans             &trans
